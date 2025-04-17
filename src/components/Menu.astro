@@ -1,0 +1,239 @@
+---
+
+---
+<header>
+    <nav class="nav">
+      <div class="menu-left">
+        <div class="logo-border">
+          <img src="/public/logo_desk.webp" alt="logo">
+        </div>
+      </div>
+  
+      <ul class="menu-center">
+        <li><a href="#">COLLAB</a></li>
+        <li><a href="#">SUSTAINABILITY</a></li>
+        <li><a href="#">POP-UP</a></li>
+        <li><a href="#">PHOTOBOOK</a></li>
+        <li class="border-sides"><a href="#">SHOP</a></li>
+      </ul>
+  
+      <div class="menu-right">
+        <img src="/public/cart.webp" alt="cart" class="cart">
+        
+      </div>
+  
+  
+      <div class="burger" id="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+  
+   
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">COLLAB</a>
+      <a href="#">SUSTAINABILITY</a>
+      <a href="#">POP-UP</a>
+      <a href="#">PHOTOBOOK</a>
+      <div class="mobile-bottom">
+          <a href="#" class="shop-link">SHOP</a>
+          <a href="#" class="bag-link">BAG</a>
+        </div>
+    </div></header>
+    <style>
+
+    header {
+        position: sticky;
+        top: 0;
+        background-color: #ffffff;
+        border-top: 3px solid black;
+        border-bottom: 3px solid black;
+        z-index: 30;
+      }
+      
+      nav.nav {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        align-items: center;
+        height: auto;
+        padding: 0 20px;
+      }
+      
+      img {
+        display: block;
+        object-fit: contain;
+      }
+      
+      .menu-left {
+        display: flex;
+        align-items: center;
+        height: 100%;
+      }
+      
+      .logo-border {
+        border-right: 3px solid black;
+        padding-right: 20px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      
+      .logo-border img {
+        max-height: 50px;
+      }
+      
+      .menu-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+        padding: 0 20px;
+        gap: 100px;
+        margin-left: 100px;
+      }
+      
+      .menu-center li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 15px;
+      }
+      
+      .border-sides {
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+      }
+      
+      .menu-center a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+        font-family: 'Archivo Narrow', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 0;
+      }
+      
+      li a:hover {
+        color: rgb(241, 139, 6);
+      }
+      
+      .menu-right {
+        display: flex;
+        align-items: left;
+        justify-content: flex-end;
+      
+      }
+      
+      .cart {
+        max-height: 30px;
+       padding-right: 120px;
+      
+      }
+      
+      /*******mobile****/
+      
+      .mobile-menu {
+          display: none;}
+      
+      
+      @media screen and (max-width: 800px) {
+         
+      .burger {
+          display: none;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 30px;
+          height: 22px;
+          cursor: pointer;
+          margin-left: auto;
+        }
+        
+        .burger .line {
+          height: 3px;
+          background-color: black;
+          width: 100%;
+        }
+        
+      
+        .mobile-menu {
+          display: none;
+          flex-direction: column;
+          background-color: white;
+          border-top: 3px solid black;
+          border-bottom: 3px solid black;
+          padding: 20px;
+        }
+        
+        .mobile-menu a {
+          padding: 30px 10px;
+          text-decoration: none;
+          color: black;
+          font-size: 18px;
+          font-family: 'Archivo Narrow', sans-serif;
+        }
+        
+        .mobile-bottom {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        
+          
+        }
+        
+        .mobile-bottom img {
+          max-height: 25px;
+        }
+        .menu-center,
+        .menu-right {
+          display: none;
+        }
+      
+        .burger {
+          display: flex;
+        }
+      
+        .mobile-menu.show {
+          display: flex;
+        }
+      
+      .mobile-bottom {
+          display: flex;
+          border-top: 3px solid black;
+          border-bottom: 3px solid black;
+          border-left: 3px solid black;
+          border-right: 3px solid black;
+          margin-top: 20px;
+        }
+        
+        .mobile-bottom a {
+          flex: 1;
+          text-align: center;
+          padding: 15px 0;
+          font-weight: bold;
+          text-decoration: none;
+          color: black;
+          font-family: 'Archivo Narrow', sans-serif;
+        }
+        
+        .shop-link {
+          border-right: 3px solid black;
+        }
+      a:hover{
+          color: #f19409;
+      }}</style>
+      <script>
+      
+      const burger = document.querySelector('#burger') as HTMLElement;
+const mobileMenu = document.querySelector('#mobileMenu') as HTMLElement;
+
+      
+    
+        
+        burger.addEventListener("click", () => {
+          mobileMenu.classList.toggle("show");
+        });
+        </script>
