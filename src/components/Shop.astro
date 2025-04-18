@@ -1,0 +1,59 @@
+---
+---
+<div class="grid_img">
+
+
+    <img src="../images/1.webp" class="slide-down" style="--endY: 0px;">
+    <img src="../images/2.webp" class="slide-down" style="--endY: 35px;">
+    <img src="../images/3.webp" class="slide-down" style="--endY: 50px;">
+    <div class="text">Limited Bareen x <br>Roskilde Festival
+    </div>
+    <img src="../images/4.webp" class="slide-down" style="--endY: 50px;">
+    <img src="../images/5.webp" class="slide-down" style="--endY: 30px;">
+    <img src="../images/6.webp" class="slide-down" style="--endY: 0px;">
+  </div>
+
+  <style>
+    .grid_img {
+  display: grid;
+  grid-template-columns: repeat(7, auto);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  width: 100%;
+  margin: 40px;
+ 
+}
+.text{ align-self: center;
+  font-size:
+36px;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  margin-right: 60px;
+}
+.grid_img img{
+  width: 70%;
+}
+
+/* Animation keyframes */
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(var(--endY, 0));
+    opacity: 1;
+  }
+}
+
+/* Apply animation to all images */
+.slide-down {
+  animation: slideFromTop 1s ease-in forwards;
+  width: 100px;
+  height: auto;
+}
+
+  </style>
