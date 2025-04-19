@@ -37,7 +37,6 @@
   width: 70%;
 }
 
-/* Animation keyframes */
 @keyframes slideFromTop {
   0% {
     transform: translateY(-150px);
@@ -49,11 +48,31 @@
   }
 }
 
-/* Apply animation to all images */
+/* Initial state: hidden */
 .slide-down {
-  animation: slideFromTop 1s ease-in forwards;
-  width: 100px;
-  height: auto;
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: transform 1s ease-in, opacity 1s ease-in;
 }
 
+/* When in view */
+.slide-down.animate {
+  animation: slideFromTop 1s ease-in forwards;
+}
   </style>
+
+  <script>// Observe elements with class "slide-img"
+    const images = document.querySelectorAll('.slide-down');
+    
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, {
+      threshold: 0.5 // Trigger when 10% of the image is in view
+    });
+    
+    images.forEach(img => observer.observe(img));
+    </script>
