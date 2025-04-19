@@ -12,8 +12,23 @@
     <img src="../images/5.webp" class="slide-down" style="--endY: 30px;">
     <img src="../images/6.webp" class="slide-down" style="--endY: 0px;">
   </div>
-
+<div class="grid_mobile">
+  <div class="grid_img_mob">
+  <img src="../images/1.webp" class="slide-down" style="--endY: 0px;">
+    <img src="../images/2.webp" class="slide-down" style="--endY: 35px;">
+    <img src="../images/3.webp" class="slide-down" style="--endY: 50px;"></div>
+    <div class="text">Limited Bareen x <br>Roskilde Festival
+    </div><div class="grid_img_mob">
+    <img src="../images/4.webp" class="slide-down" style="--endY: 50px;">
+    <img src="../images/5.webp" class="slide-down" style="--endY: 30px;">
+    <img src="../images/6.webp" class="slide-down" style="--endY: 0px;"></div>
+  </div>
   <style>
+
+    .grid_mobile{
+      display: none;}
+
+
     .grid_img {
   display: grid;
   grid-template-columns: repeat(7, auto);
@@ -26,18 +41,18 @@
  
 }
 .text{ align-self: center;
-  font-size:
-36px;
+  font-size: 36px;
   font-weight: bold;
   padding: 10px;
   width: 100%;
   margin-right: 60px;
 }
+
 .grid_img img{
   width: 70%;
 }
 
-/* Animation keyframes */
+
 @keyframes slideFromTop {
   0% {
     transform: translateY(-150px);
@@ -49,11 +64,47 @@
   }
 }
 
-/* Apply animation to all images */
+
 .slide-down {
   animation: slideFromTop 1s ease-in forwards;
   width: 100px;
   height: auto;
 }
 
-  </style>
+@media screen and (max-width: 800px) {
+  .grid_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+   
+    gap:6rem;
+  }
+.text{
+  font-size: 24px;
+}
+  .grid_img {
+    display: none;
+  }
+
+  .grid_img_mob {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .grid_img_mob img {
+    width: 20%;
+    height: max-content;
+ 
+  }
+
+  .text {
+    text-align: center;
+    margin: 2rem 0;
+  }
+}
+</style>
