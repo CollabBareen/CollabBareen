@@ -2,6 +2,116 @@
 import Map from "./Map.astro";
 ---
 
-<section></section>
+<section>
+  <div class="text_left">
+    <article id="para_1">
+      <h1>Welcome to the Bareen x Roskilde Festival Pop-Up Shop</h1>
+      <p>Step into the heart of the festival spirit with the exclusive Bareen x Roskilde collaboration. This limited-edition collection blends Bareen’s clean, conscious aesthetic with the bold, creative energy of Roskilde Festival.</p>
+      <p>At our pop-up shop, you'll find a curated selection of clothing designed to celebrate self-expression, freedom, and sustainable fashion. Every piece is crafted with care — from soft organic fabrics to minimalist prints — made for dancing in the sun, stretching in the grass, or just vibing with the music.</p>
+    </article>
+
+    <article id="para_2">
+      <h1>Bareen x Roskilde. Limited drop. Maximum vibes.</h1>
+      <p>Whether you're looking for a festival keepsake or your new favorite tee, this is your only chance to shop the collection — available only here, only now, and only while supplies last. Come by, try something on, and be a part of the movement.</p>
+    </article>
+  </div>
+
+  <div class="img_container">
+    <p class="rotate">This is not about clothes. It’s about moments. Movement.</p>
+    <img id="under" src="../images/popup3.webp" alt="" />
+  </div>
+  <img id="overlap" src="../images/popup1.webp" alt="" />
+</section>
 
 <Map />
+
+<style>
+  section {
+    margin-bottom: 9rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .img_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    margin-top: 9rem;
+  }
+  .rotate {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    margin-left: 5rem;
+    font-size: 0.7rem;
+    margin-top: 9rem;
+  }
+
+  /*Billede layout*/
+  #under {
+    position: absolute;
+    z-index: 1;
+    width: 278.667px;
+    height: 418px;
+    margin-left: 7rem;
+  }
+
+  #overlap {
+    position: relative;
+    z-index: 2;
+    width: 294px;
+    height: 196px;
+    top: 65px;
+    right: calc(100% - 435px);
+  }
+
+  @media (min-width: 900px) {
+    h1 {
+      text-align: left;
+    }
+    section {
+      position: relative;
+      display: flex;
+      margin-bottom: 10rem;
+      margin-top: 2rem;
+    }
+
+    .text_left {
+      margin: 3rem;
+      margin-right: 20rem;
+    }
+
+    article#para_1,
+    article#para_2 {
+      margin-bottom: 6rem;
+    }
+
+    .img_container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      margin-top: 2rem;
+      margin-left: 8rem;
+      margin-right: -15rem;
+    }
+    .rotate {
+      margin-left: -19rem;
+      font-size: 0.8rem;
+      margin-top: 8rem;
+    }
+    #under {
+      width: 370px;
+      height: 530px;
+      margin-left: -16rem;
+    }
+    #overlap {
+      width: 440px;
+      height: 255px;
+      top: 370px;
+      right: calc(100% - 1080px);
+    }
+  }
+</style>
