@@ -1,0 +1,95 @@
+---
+
+---
+
+<section>
+  <div class="sticker">
+    <h2>Pop-up shop</h2>
+  </div>
+
+  <div class="map-content">
+    <div id="map_text">
+      <h1>Find Us on the Festival Map</h1>
+
+      <p>Looking for the Bareen x Roskilde pop-up shop? We’ve got you covered. You can easily spot our tent on the official festival map — just look for the “Pop-Up Market” area or search for “Bareen” in the festival app.</p>
+
+      <p>Come by and say hi — we’ll be the ones with the white tent, good energy, and exclusive pieces you won’t want to miss.</p>
+
+      <p>See you there!</p>
+    </div>
+
+    <img id="map" src="../images/popup2.webp" alt="" />
+  </div>
+</section>
+
+<style>
+  section {
+    position: relative;
+    background-color: var(--dark-grey);
+    color: white;
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .map-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    margin-right: 2rem;
+  }
+
+  .map-content h1 {
+    margin-bottom: 1rem;
+  }
+
+  .map-content p {
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .sticker {
+    position: absolute;
+    width: 300px;
+    height: 60px;
+    top: 55px;
+    right: -65px;
+    transform: rotate(45deg);
+    clip-path: polygon(20% 0px, 80% 0, 100% 100%, 0% 100%);
+    z-index: 10;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange);
+  }
+
+  @media (min-width: 900px) {
+    section {
+      padding: 5rem 2rem 2rem;
+      padding-bottom: 0;
+    }
+    .map-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: fit-content;
+    }
+    .map-content img {
+      order: -1;
+      max-width: 85%;
+      margin-left: 4rem;
+    }
+
+    #map_text {
+      padding: 3rem;
+      margin-right: 2rem;
+    }
+
+    .sticker {
+      width: 400px;
+      height: 90px;
+      top: 64px;
+      right: -90px;
+      clip-path: polygon(23% 0px, 78% 0, 100% 100%, 0% 100%);
+    }
+  }
+</style>
