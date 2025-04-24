@@ -1,0 +1,48 @@
+---
+import ProductCard from "../../components/ProductCard.astro";
+import Menu from "../../components/Menu.astro";
+
+const url = "https://tzufnywxqscsndrelzgq.supabase.co/rest/v1/bareen";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InR6dWZueXd4cXNjc25kcmVsemdxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyMTc0NTAsImV4cCI6MjA1OTc5MzQ1MH0.H8yA-T1SEPU6nE_xdzI3NBNujBk0zQelGvW_u-IWCVA";
+
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+
+const request = await fetch(url, options);
+const data = await request.json();
+
+console.log("data", data);
+---
+
+<body>
+  <Menu />
+</body>
+
+<section>
+  <h2>Shop</h2>
+  <button><a href="/">GO BACK</a></button>
+</section>
+
+<div class="products">
+  {
+    data.map((product) => {
+      return <ProductCard data={product} />;
+    })
+  }
+</div>
+
+<style>
+  section {
+    padding: 2rem;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-around;
+    padding-top: 2rem;
+  }
+</style>
