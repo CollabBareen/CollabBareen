@@ -1,5 +1,9 @@
+---
+const { id } = Astro.props;
+---
 
-<h2>PHOTOBOOK</h2><section class="photobook_grid">
+
+<h2>PHOTOBOOK</h2><section id={id} class="photobook_grid">
    
     <div class="text">
         <h3>Bold. Energetic.<br>
@@ -123,6 +127,6 @@ p{
 h3{
     width: 100%;
 }
-}
+}}ß
 
 </style>
