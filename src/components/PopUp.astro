@@ -1,6 +1,10 @@
 ---
 import Map from "./Map.astro";
+const { id } = Astro.props;
 ---
+<div id=`${id}` class="pop_up"></div>
+<section></section>
+
 
 <section>
   <div class="text_left">
@@ -22,6 +26,7 @@ import Map from "./Map.astro";
   </div>
   <img id="overlap" src="../images/popup1.webp" alt="" />
 </section>
+
 
 <Map />
 
