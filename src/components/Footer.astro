@@ -1,0 +1,76 @@
+---
+import Banner from "./Banner.astro";
+---
+
+<Banner />
+<div class="footer">
+  <h4>Stay updated</h4>
+  <p>Want to be the first to know about exclusive sales, special discounts, exciting events, limited-edition collections, and fresh drops? Sign up for our updates and never miss out on the latest from Bareen.</p>
+  <form>
+    <div class="personal_info">
+      <input type="text" placeholder="Full name" />
+      <input type="text" placeholder="Country" />
+      <input type="email" placeholder="Email address" class="email" />
+    </div>
+
+    <label class="notifications">
+      <input type="checkbox" />
+      Yes, I agree to receive emails with news and marketing-related content from Bareen x Roskilde Festival Foundation on their activities. You can expect to receive news by mail once or twice a month. If you no longer wish to receive news and marketing mails, you can unsubscribe at any time at the bottom of an email.
+    </label>
+  </form>
+</div>
+
+<style>
+  .footer {
+    padding: 30px;
+    background-color: var(--dark-grey);
+    color: white;
+    padding: 40px 20% 80px 20%;
+  }
+  h4 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    font-family: "Helvetica Neue Bold", sans-serif;
+    font-size: 32px;
+  }
+
+  p {
+    padding: 20px 0px 20px 0;
+  }
+
+  .personal_info {
+    display: grid;
+    gap: 10px;
+    padding-bottom: 20px;
+  }
+
+  input,
+  button {
+    background-color: var(--dark-grey);
+    color: white;
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+  }
+
+  .notifications {
+    font-family: "Helvetica Neue", sans-serif;
+  }
+
+  @media (min-width: 900px) {
+    .footer {
+      padding: 40px 30% 80px 30%;
+    }
+    h4 {
+      font-size: 46px;
+    }
+
+    .personal_info {
+      grid-template-columns: 1.5fr 1fr;
+    }
+
+    .email {
+      grid-column: span 2;
+    }
+  }
+</style>
