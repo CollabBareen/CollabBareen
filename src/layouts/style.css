@@ -1,0 +1,75 @@
+/* GENERAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin-inline: auto;
+  background-color: white;
+}
+
+/* colors */
+:root {
+  --orange: #ff7300;
+  --grey: #d1d1d1;
+  --dark-grey: #222222;
+}
+
+/* fonts */
+h1 {
+  font-family: "Helvetica Neue", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h2 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+h4 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+p {
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 64px;
+  }
+
+  p {
+    font-size: 20px;
+  }}

@@ -1,8 +1,10 @@
 ---
+const { id } = Astro.props;
 ---
+<div id=`${id}` class="collab"></div>
 <div class="grid_collab">
     <div><img class="collab_img" src="../images/collab.png" alt="billede"></div>
-   <div class="collab_text"><h2>BAREEN X ROSKILDE FESTIVAL COLLABORATION</h2>
+   <div class="collab_text"><h1>BAREEN X ROSKILDE FESTIVAL COLLABORATION</h1>
     <p>Ready to feel the beat in your bones and the fabric on your skin?
         Bareen joins forces with Roskilde Festival and the sports community to create more than a look—it’s a movement. Born from rhythm, sweat, and street culture, this collab fuses fashion, music, and motion.
         Think bold cuts. Think fluid energy. Think gear that moves like you do.
@@ -22,10 +24,21 @@
 }
 
 .collab_img{
-    box-shadow: 35px 35px #D1D1D1;
+    box-shadow: 35px 35px var(--grey);
     width: 80%;
 }
 .collab_text{
     margin-top: 10rem;
+    
+}
+p{
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .collab_img{
+        width:60%;
+margin: 0 auto;
+    }
 }
 </style>
